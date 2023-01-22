@@ -1,6 +1,6 @@
 package accommodation;
 
-public class Hotel extends Accommodation implements IAccomodation {
+public class Hotel extends Accommodation implements IAccommodation {
     private String city;
     private String road;
     private String number;

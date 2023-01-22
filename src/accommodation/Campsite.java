@@ -1,6 +1,6 @@
 package accommodation;
 
-public class Campsite extends Accommodation implements IAccomodation {
+public class Campsite extends Accommodation implements IAccommodation {
     private String city;
     private String number;
     private boolean isNearbyWater;
@@ -55,5 +55,16 @@ public class Campsite extends Accommodation implements IAccomodation {
     public String toString() {
         return super.toString()+ "campsite [city="
                 + getCity() + ", number=" + getNumber() +"isNearbyWater=" + getIsNearbyWater()+"isNearbyForest="+getIsNearbyForest()+ ", description=" + getDescription() + "]";
+    }
+    @Override
+    public int objectStar() {
+        int hostelStar = 0;
+        if (getIsNearbyForest()){
+            hostelStar += 1;
+        }
+        if (getIsNearbyWater()){
+            hostelStar +=1;
+        }
+        return super.objectStar() + hostelStar;
     }
 }

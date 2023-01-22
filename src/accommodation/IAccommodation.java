@@ -1,6 +1,6 @@
 package accommodation;
 
-public interface IAccomodation {
+public interface IAccommodation {
     String city = null;
     String number = null;
     int numberOfParkingPlaces = 0;
