@@ -89,7 +89,7 @@ public class HostelFloor extends Hostel implements ISubAccommodation{
                 + ", haveWifi=" + isHaveWifi() + ", pricePerDay=" + getPricePerDay() + ", floorDescription=" + getFloorDescription() + "]";
     }
     public int pricePerWeek(){
-        return (int) (getPricePerDay() * 7 * (1 - discount));
+        return (int) (getPricePerDay()/getNumberOfGuests() * 7 * (1 - discount));
     }
     @Override
     public int objectStarConditions(){
