@@ -85,12 +85,28 @@ public class HostelFloor extends Hostel implements ISubAccommodation{
 
     @Override
     public String toString() {
-        return super.toString() + " HostelFloor [numberOfGuests=" + numberOfGuests + ", floorArea=" + floorArea + ", havePrivateBathroom=" + havePrivateBathroom
-                + ", haveWifi=" + haveWifi + ", pricePerDay=" + pricePerDay + ", floorDescription=" + floorDescription + "]";
+        return super.toString() + " HostelFloor [numberOfGuests=" + getNumberOfGuests() + ", floorArea=" + getFloorArea() + ", havePrivateBathroom=" + isHavePrivateBathroom()
+                + ", haveWifi=" + isHaveWifi() + ", pricePerDay=" + getPricePerDay() + ", floorDescription=" + getFloorDescription() + "]";
     }
-
+    public int pricePerWeek(){
+        return (int) (getPricePerDay() * 7 * (1 - discount));
+    }
     @Override
     public int objectStarConditions(){
-        return 0;
+        int starHostelFloor = 0;
+        if(pricePerWeek() < 400){
+            starHostelFloor +=1;
+        }
+        if(isHaveWifi()){
+            starHostelFloor +=1;
+        }
+        if(isHavePrivateBathroom()){
+            starHostelFloor +=1;
+        }
+        return starHostelFloor;
+    }
+    @Override
+    public int objectStar() {
+        return super.objectStar() + objectStarConditions();
     }
 }

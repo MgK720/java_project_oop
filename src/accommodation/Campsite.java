@@ -6,6 +6,7 @@ public class Campsite extends Accommodation implements IAccommodation {
     private boolean isNearbyWater;
     private boolean isNearbyForest;
     private String description;
+    static double discount = 0.25;
 
     public Campsite(
             int idOfAccomodation,
@@ -59,7 +60,6 @@ public class Campsite extends Accommodation implements IAccommodation {
     public void setDescription(String description) {
         this.description = description;
     }
-
     @Override
     public String toString() {
         return super.toString()+ "campsite [city="
