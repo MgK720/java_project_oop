@@ -94,8 +94,7 @@ public class Hostel extends Accommodation implements IAccommodation {
     public boolean isNumberOfParkingPlacesAbove30(){
         return getNumberOfParkingPlaces() > 30;
     }
-    @Override
-    public int objectStar() {
+    public int objectStarConditions(){
         int hostelStar = 0;
         if (isNumberOfParkingPlacesAbove30()){
             hostelStar += 1;
@@ -103,7 +102,11 @@ public class Hostel extends Accommodation implements IAccommodation {
         if (getIsNearbyCenter()){
             hostelStar +=1;
         }
-        return super.objectStar() + hostelStar;
+        return hostelStar;
+    }
+    @Override
+    public int objectStar() {
+        return super.objectStar() + objectStarConditions();
     }
 }
 

@@ -65,15 +65,19 @@ public class Campsite extends Accommodation implements IAccommodation {
         return super.toString()+ "campsite [city="
                 + getCity() + ", number=" + getNumber() +"isNearbyWater=" + getIsNearbyWater()+"isNearbyForest="+getIsNearbyForest()+ ", description=" + getDescription() + "]";
     }
-    @Override
-    public int objectStar() {
-        int hostelStar = 0;
+    public int objectStarConditions() {
+        int campsiteStar = 0;
         if (getIsNearbyForest()){
-            hostelStar += 1;
+            campsiteStar += 1;
         }
         if (getIsNearbyWater()){
-            hostelStar +=1;
+            campsiteStar +=1;
         }
-        return super.objectStar() + hostelStar;
+        return campsiteStar;
+    }
+
+    @Override
+    public int objectStar() {
+        return super.objectStar() + objectStarConditions();
     }
 }

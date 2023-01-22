@@ -1,5 +1,5 @@
 package accommodation;
-public class Accommodation  {
+abstract class Accommodation  {
     private int idOfAccomodation;
     private double areaOfObject;
     private int yearOfConstruction;
@@ -69,4 +69,5 @@ public class Accommodation  {
             return 0;
         }
     }
+    public abstract int objectStarConditions();
 }

@@ -88,4 +88,9 @@ public class HostelFloor extends Hostel implements ISubAccommodation{
         return super.toString() + " HostelFloor [numberOfGuests=" + numberOfGuests + ", floorArea=" + floorArea + ", havePrivateBathroom=" + havePrivateBathroom
                 + ", haveWifi=" + haveWifi + ", pricePerDay=" + pricePerDay + ", floorDescription=" + floorDescription + "]";
     }
+
+    @Override
+    public int objectStarConditions(){
+        return 0;
+    }
 }
