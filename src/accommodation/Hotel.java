@@ -78,6 +78,20 @@ public class Hotel extends Accommodation implements IAccomodation {
     public String toString() {
         return super.toString()+ "Hotel [city="
                 + getCity() + ", road=" + getRoad() + ", number=" + getNumber() + ", numberOfFloors=" + getNumberOfFloors()
-                + ", numberOfParkingPlaces=" + getNumberOfParkingPlaces() +"isNearbyCenter" + isNearbyCenter+ ", description=" + getDescription() + "]";
+                + ", numberOfParkingPlaces=" + getNumberOfParkingPlaces() +"isNearbyCenter=" + isNearbyCenter+ ", description=" + getDescription() + "]";
+    }
+    public boolean isNumberOfParkingPlacesAbove30(){
+        return getNumberOfParkingPlaces() > 30;
+    }
+    @Override
+    public int objectStar() {
+        int hostelStar = 0;
+        if (isNumberOfParkingPlacesAbove30()){
+            hostelStar += 1;
+        }
+        if (getIsNearbyCenter()){
+            hostelStar +=1;
+        }
+        return super.objectStar() + hostelStar;
     }
 }

@@ -4,13 +4,15 @@ public class Campsite extends Accommodation implements IAccomodation {
     private String city;
     private String number;
     private boolean isNearbyWater;
+    private boolean isNearbyForest;
     private String description;
 
-    public Campsite(int idOfAccomodation, double areaOfObject, int yearOfConstruction, double objectPrize, String city, String number, boolean isNearbyWater, String description) {
+    public Campsite(int idOfAccomodation, double areaOfObject, int yearOfConstruction, double objectPrize, String city, String number, boolean isNearbyWater, boolean isNearbyForest, String description) {
         super(idOfAccomodation, areaOfObject, yearOfConstruction, objectPrize);
         this.city = city;
         this.number = number;
         this.isNearbyWater = isNearbyWater;
+        this.isNearbyForest = isNearbyForest;
         this.description = description;
     }
 
@@ -35,7 +37,12 @@ public class Campsite extends Accommodation implements IAccomodation {
     public void setIsNearbyWater(){
         this.isNearbyWater = isNearbyWater;
     }
-
+    public boolean getIsNearbyForest(){
+        return isNearbyForest;
+    }
+    public void setIsNearbyForest(){
+        this.isNearbyForest = isNearbyForest;
+    }
     public String getDescription() {
         return description;
     }
@@ -47,6 +54,6 @@ public class Campsite extends Accommodation implements IAccomodation {
     @Override
     public String toString() {
         return super.toString()+ "campsite [city="
-                + getCity() + ", number=" + getNumber() +"isNearbyWater" + getIsNearbyWater()+ ", description=" + getDescription() + "]";
+                + getCity() + ", number=" + getNumber() +"isNearbyWater=" + getIsNearbyWater()+"isNearbyForest="+getIsNearbyForest()+ ", description=" + getDescription() + "]";
     }
 }
