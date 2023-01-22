@@ -7,7 +7,16 @@ public class Campsite extends Accommodation implements IAccommodation {
     private boolean isNearbyForest;
     private String description;
 
-    public Campsite(int idOfAccomodation, double areaOfObject, int yearOfConstruction, double objectPrize, String city, String number, boolean isNearbyWater, boolean isNearbyForest, String description) {
+    public Campsite(
+            int idOfAccomodation,
+            double areaOfObject,
+            int yearOfConstruction,
+            double objectPrize,
+            String city,
+            String number,
+            boolean isNearbyWater,
+            boolean isNearbyForest,
+            String description) {
         super(idOfAccomodation, areaOfObject, yearOfConstruction, objectPrize);
         this.city = city;
         this.number = number;

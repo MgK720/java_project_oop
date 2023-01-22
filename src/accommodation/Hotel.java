@@ -9,7 +9,18 @@ public class Hotel extends Accommodation implements IAccommodation {
     private boolean isNearbyCenter;
     private String description;
 
-    public Hotel(int idOfAccomodation, double areaOfObject, int yearOfConstruction, double objectPrize, String city, String road, String number, int numberOfFloors, int numberOfParkingPlaces, boolean isNearbyCenter, String description) {
+    public Hotel(
+            int idOfAccomodation,
+            double areaOfObject,
+            int yearOfConstruction,
+            double objectPrize,
+            String city,
+            String road,
+            String number,
+            int numberOfFloors,
+            int numberOfParkingPlaces,
+            boolean isNearbyCenter,
+            String description) {
         super(idOfAccomodation, areaOfObject, yearOfConstruction, objectPrize);
         this.city = city;
         this.road = road;
