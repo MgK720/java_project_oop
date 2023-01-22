@@ -1,6 +1,6 @@
 package accommodation;
 
-public class HostelFloor extends Hostel implements ISubAccommodation{
+public class HostelFloor extends Hostel{
     private int numberOfGuests;
     private double floorArea;
     private boolean havePrivateBathroom;
@@ -107,6 +107,6 @@ public class HostelFloor extends Hostel implements ISubAccommodation{
     }
     @Override
     public int objectStar() {
-        return super.objectStar() + objectStarConditions();
+        return super.objectStar() + objectStarConditions()+1;
     }
 }

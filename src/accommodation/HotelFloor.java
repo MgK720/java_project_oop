@@ -1,6 +1,6 @@
 package accommodation;
 
-public class HotelFloor extends Hotel implements ISubAccommodation{
+public class HotelFloor extends Hotel{
     private int numberOfGuests;
     private double floorArea;
     private boolean haveFreeParkingPlace;
@@ -110,6 +110,6 @@ public class HotelFloor extends Hotel implements ISubAccommodation{
     }
     @Override
     public int objectStar() {
-        return super.objectStar() + objectStarConditions();
+        return super.objectStar() + objectStarConditions()+2;
     }
 }
