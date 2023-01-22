@@ -5,4 +5,5 @@ public interface IAccomodation {
     String number = null;
     int numberOfParkingPlaces = 0;
     String description = null;
+    String toString();
 }
