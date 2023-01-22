@@ -49,4 +49,24 @@ public class Accommodation  {
         return "Accommodation [idOfAccomodation=" + getIdOfAccomodation() + ", areaOfObject=" + getAreaOfObject()
                 + ", yearOfConstruction=" + getYearOfConstruction() + ", objectPrize=" + getObjectPrize() + "]";
     }
+    public boolean isRenovatedFrom1990to2000() {
+        return getYearOfConstruction() >= 1990 && getYearOfConstruction() < 2000;
+    }
+    public boolean isRenovatedFrom2000to2010() {
+        return getYearOfConstruction() >= 2000 && getYearOfConstruction() <= 2010;
+    }
+    public boolean isRenovatedAbove2010() {
+        return getYearOfConstruction() > 2010;
+    }
+    public int objectStar(){
+        if(isRenovatedFrom1990to2000()){
+            return 1;
+        }else if (isRenovatedFrom2000to2010()){
+            return 2;
+        }else if(isRenovatedAbove2010()){
+            return 3;
+        }else{
+            return 0;
+        }
+    }
 }

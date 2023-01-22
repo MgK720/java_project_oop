@@ -72,6 +72,11 @@ public class Hostel extends Accommodation implements IAccomodation{
                 + getCity() + ", road=" + getRoad() + ", number=" + getNumber() + ", numberOfFloors=" + getNumberOfFloors()
                 + ", numberOfParkingPlaces=" + getNumberOfParkingPlaces() + ", description=" + getDescription() + "]";
     }
+
+    @Override
+    public int objectStar() {
+        return super.objectStar();
+    }
 }
 
 
