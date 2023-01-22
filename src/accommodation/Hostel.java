@@ -17,4 +17,62 @@ public class Hostel extends Accommodation implements IAccomodation{
         this.numberOfParkingPlaces = numberOfParkingPlaces;
         this.description = description;
     }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getRoad() {
+        return road;
+    }
+
+    public void setRoad(String road) {
+        this.road = road;
+    }
+
+    public String getNumber() {
+        return number;
+    }
+
+    public void setNumber(String number) {
+        this.number = number;
+    }
+
+    public int getNumberOfFloors() {
+        return numberOfFloors;
+    }
+
+    public void setNumberOfFloors(int numberOfFloors) {
+        this.numberOfFloors = numberOfFloors;
+    }
+
+    public int getNumberOfParkingPlaces() {
+        return numberOfParkingPlaces;
+    }
+
+    public void setNumberOfParkingPlaces(int numberOfParkingPlaces) {
+        this.numberOfParkingPlaces = numberOfParkingPlaces;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    @Override
+    public String toString() {
+        return "Hostel [city=" + city + ", road=" + road + ", number=" + number + ", numberOfFloors=" + numberOfFloors
+                + ", numberOfParkingPlaces=" + numberOfParkingPlaces + ", description=" + description + ", idOfAccomodation="
+                + getIdOfAccomodation() + ", areaOfObject=" + getAreaOfObject() + ", yearOfConstruction="
+                + getYearOfConstruction() + ", objectPrize=" + getObjectPrize() + "]";
+    }
 }
+
+
