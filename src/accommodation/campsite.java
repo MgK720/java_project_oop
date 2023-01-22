@@ -46,8 +46,7 @@ public class campsite extends Accommodation implements IAccomodation {
 
     @Override
     public String toString() {
-        return "Accommodation [idOfAccomodation=" + getIdOfAccomodation() + ", areaOfObject=" + getAreaOfObject()
-                + ", yearOfConstruction=" + getYearOfConstruction() + ", objectPrize=" + getObjectPrize() + "] campsite [city="
+        return super.toString()+ "campsite [city="
                 + getCity() + ", number=" + getNumber() +"isNearbyWater" + getIsNearbyWater()+ ", description=" + getDescription() + "]";
     }
 }

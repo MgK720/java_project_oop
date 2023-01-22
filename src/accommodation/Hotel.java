@@ -68,8 +68,7 @@ public class Hotel extends Accommodation implements IAccomodation {
 
     @Override
     public String toString() {
-        return "Accommodation [idOfAccomodation=" + getIdOfAccomodation() + ", areaOfObject=" + getAreaOfObject()
-                + ", yearOfConstruction=" + getYearOfConstruction() + ", objectPrize=" + getObjectPrize() + "] Hotel [city="
+        return super.toString()+ "Hotel [city="
                 + getCity() + ", road=" + getRoad() + ", number=" + getNumber() + ", numberOfFloors=" + getNumberOfFloors()
                 + ", numberOfParkingPlaces=" + getNumberOfParkingPlaces() + ", description=" + getDescription() + "]";
     }
