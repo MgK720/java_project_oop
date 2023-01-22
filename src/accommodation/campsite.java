@@ -1,6 +1,7 @@
 package accommodation;
 
-public class Hotel extends Accommodation {
+public class campsite extends Accommodation {
     private String city;
+    private String road;
     private String number;
 }
