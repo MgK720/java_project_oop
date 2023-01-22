@@ -6,15 +6,17 @@ public class Hostel extends Accommodation implements IAccomodation{
     private String number;
     private int numberOfFloors;
     private int numberOfParkingPlaces;
+    private boolean isNearbyCenter;
     private String description;
 
-    public Hostel(int idOfAccomodation, double areaOfObject, int yearOfConstruction, double objectPrize,String city, String road, String number, int numberOfFloors, int numberOfParkingPlaces, String description) {
+    public Hostel(int idOfAccomodation, double areaOfObject, int yearOfConstruction, double objectPrize, String city, String road, String number, int numberOfFloors, int numberOfParkingPlaces, boolean isNearbyCenter, String description) {
         super(idOfAccomodation, areaOfObject, yearOfConstruction, objectPrize);
         this.city = city;
         this.road = road;
         this.number = number;
         this.numberOfFloors = numberOfFloors;
         this.numberOfParkingPlaces = numberOfParkingPlaces;
+        this.isNearbyCenter = isNearbyCenter;
         this.description = description;
     }
 
@@ -57,6 +59,12 @@ public class Hostel extends Accommodation implements IAccomodation{
     public void setNumberOfParkingPlaces(int numberOfParkingPlaces) {
         this.numberOfParkingPlaces = numberOfParkingPlaces;
     }
+    public boolean getIsNearbyCenter(){
+        return isNearbyCenter;
+    }
+    public void setIsNearbyCenter(){
+        this.isNearbyCenter = isNearbyCenter;
+    }
 
     public String getDescription() {
         return description;
@@ -75,7 +83,9 @@ public class Hostel extends Accommodation implements IAccomodation{
 
     @Override
     public int objectStar() {
-        return super.objectStar();
+        int hostelStar = 0;
+
+        return super.objectStar() + hostelStar;
     }
 }
 
