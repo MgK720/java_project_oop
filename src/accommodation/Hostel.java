@@ -68,10 +68,10 @@ public class Hostel extends Accommodation implements IAccomodation{
 
     @Override
     public String toString() {
-        return "Hostel [city=" + city + ", road=" + road + ", number=" + number + ", numberOfFloors=" + numberOfFloors
-                + ", numberOfParkingPlaces=" + numberOfParkingPlaces + ", description=" + description + ", idOfAccomodation="
-                + getIdOfAccomodation() + ", areaOfObject=" + getAreaOfObject() + ", yearOfConstruction="
-                + getYearOfConstruction() + ", objectPrize=" + getObjectPrize() + "]";
+        return "Accommodation [idOfAccomodation=" + getIdOfAccomodation() + ", areaOfObject=" + getAreaOfObject()
+                + ", yearOfConstruction=" + getYearOfConstruction() + ", objectPrize=" + getObjectPrize() + "] Hostel [city="
+                + getCity() + ", road=" + getRoad() + ", number=" + getNumber() + ", numberOfFloors=" + getNumberOfFloors()
+                + ", numberOfParkingPlaces=" + getNumberOfParkingPlaces() + ", description=" + getDescription() + "]";
     }
 }
 
