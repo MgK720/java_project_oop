@@ -31,59 +31,31 @@ public class Hostel extends Accommodation implements IAccommodation {
         this.description = description;
     }
 
-    public String getCity() {
-        return city;
-    }
+    public String getCity() {return city;}
 
-    public void setCity(String city) {
-        this.city = city;
-    }
+    public void setCity(String city) {this.city = city;}
 
-    public String getRoad() {
-        return road;
-    }
+    public String getRoad() {return road;}
 
-    public void setRoad(String road) {
-        this.road = road;
-    }
+    public void setRoad(String road) {this.road = road;}
 
-    public String getNumber() {
-        return number;
-    }
+    public String getNumber() {return number;}
 
-    public void setNumber(String number) {
-        this.number = number;
-    }
+    public void setNumber(String number) {this.number = number;}
 
-    public int getNumberOfFloors() {
-        return numberOfFloors;
-    }
+    public int getNumberOfFloors() {return numberOfFloors;}
 
-    public void setNumberOfFloors(int numberOfFloors) {
-        this.numberOfFloors = numberOfFloors;
-    }
+    public void setNumberOfFloors(int numberOfFloors) {this.numberOfFloors = numberOfFloors;}
 
-    public int getNumberOfParkingPlaces() {
-        return numberOfParkingPlaces;
-    }
+    public int getNumberOfParkingPlaces() {return numberOfParkingPlaces;}
 
-    public void setNumberOfParkingPlaces(int numberOfParkingPlaces) {
-        this.numberOfParkingPlaces = numberOfParkingPlaces;
-    }
-    public boolean getIsNearbyCenter(){
-        return isNearbyCenter;
-    }
-    public void setIsNearbyCenter(){
-        this.isNearbyCenter = isNearbyCenter;
-    }
+    public void setNumberOfParkingPlaces(int numberOfParkingPlaces) {this.numberOfParkingPlaces = numberOfParkingPlaces;}
+    public boolean getIsNearbyCenter(){return isNearbyCenter;}
+    public void setIsNearbyCenter(){this.isNearbyCenter = isNearbyCenter;}
 
-    public String getDescription() {
-        return description;
-    }
+    public String getDescription() {return description;}
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
+    public void setDescription(String description) {this.description = description;}
 
     @Override
     public String toString() {
@@ -91,23 +63,15 @@ public class Hostel extends Accommodation implements IAccommodation {
                 + getCity() + ", road=" + getRoad() + ", number=" + getNumber() + ", numberOfFloors=" + getNumberOfFloors()
                 + ", numberOfParkingPlaces=" + getNumberOfParkingPlaces() +"isNearbyCenter=" + isNearbyCenter+ ", description=" + getDescription() + "]";
     }
-    public boolean isNumberOfParkingPlacesAbove30(){
-        return getNumberOfParkingPlaces() > 30;
-    }
+    public boolean isNumberOfParkingPlacesAbove30(){return getNumberOfParkingPlaces() > 30;}
     public int objectStarConditions(){
         int hostelStar = 0;
-        if (isNumberOfParkingPlacesAbove30()){
-            hostelStar += 1;
-        }
-        if (getIsNearbyCenter()){
-            hostelStar +=1;
-        }
+        if (isNumberOfParkingPlacesAbove30()){hostelStar += 1;}
+        if (getIsNearbyCenter()){hostelStar +=1;}
         return hostelStar;
     }
     @Override
-    public int objectStar() {
-        return super.objectStar() + objectStarConditions();
-    }
+    public int objectStar() {return super.objectStar() + objectStarConditions();}
 }
 
 

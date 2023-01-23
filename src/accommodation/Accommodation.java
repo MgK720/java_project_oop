@@ -11,6 +11,7 @@ abstract class Accommodation  {
 
     public Accommodation(double areaOfObject, int yearOfConstruction, double objectPrize) {
         this.idOfAccomodation = idOfAccomodation++;
+        ids.add(this.idOfAccomodation);
         this.areaOfObject = areaOfObject;
         this.yearOfConstruction = yearOfConstruction;
         this.objectPrize = objectPrize;

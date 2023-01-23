@@ -34,62 +34,36 @@ public class HostelFloor extends Hostel{
         this.pricePerDay = pricePerDay;
         this.floorDescription = floorDescription;
     }
-    public int getNumberOfGuests() {
-        return numberOfGuests;
-    }
+    public int getNumberOfGuests() {return numberOfGuests;}
 
-    public void setNumberOfGuests(int numberOfGuests) {
-        this.numberOfGuests = numberOfGuests;
-    }
+    public void setNumberOfGuests(int numberOfGuests) {this.numberOfGuests = numberOfGuests;}
 
-    public double getFloorArea() {
-        return floorArea;
-    }
+    public double getFloorArea() {return floorArea;}
 
-    public void setFloorArea(double floorArea) {
-        this.floorArea = floorArea;
-    }
+    public void setFloorArea(double floorArea) {this.floorArea = floorArea;}
 
-    public boolean isHavePrivateBathroom() {
-        return havePrivateBathroom;
-    }
+    public boolean isHavePrivateBathroom() {return havePrivateBathroom;}
 
-    public void setHavePrivateBathroom(boolean havePrivateBathroom) {
-        this.havePrivateBathroom = havePrivateBathroom;
-    }
+    public void setHavePrivateBathroom(boolean havePrivateBathroom) {this.havePrivateBathroom = havePrivateBathroom;}
 
-    public boolean isHaveWifi() {
-        return haveWifi;
-    }
+    public boolean isHaveWifi() {return haveWifi;}
 
-    public void setHaveWifi(boolean haveWifi) {
-        this.haveWifi = haveWifi;
-    }
+    public void setHaveWifi(boolean haveWifi) {this.haveWifi = haveWifi;}
 
-    public int getPricePerDay() {
-        return pricePerDay;
-    }
+    public int getPricePerDay() {return pricePerDay;}
 
-    public void setPricePerDay(int pricePerDay) {
-        this.pricePerDay = pricePerDay;
-    }
+    public void setPricePerDay(int pricePerDay) {this.pricePerDay = pricePerDay;}
 
-    public String getFloorDescription() {
-        return floorDescription;
-    }
+    public String getFloorDescription() {return floorDescription;}
 
-    public void setFloorDescription(String floorDescription) {
-        this.floorDescription = floorDescription;
-    }
+    public void setFloorDescription(String floorDescription) {this.floorDescription = floorDescription;}
 
     @Override
     public String toString() {
         return super.toString() + " HostelFloor [numberOfGuests=" + getNumberOfGuests() + ", floorArea=" + getFloorArea() + ", havePrivateBathroom=" + isHavePrivateBathroom()
                 + ", haveWifi=" + isHaveWifi() + ", pricePerDay=" + getPricePerDay() + ", floorDescription=" + getFloorDescription() +"objectStar"+objectStar()+ "]";
     }
-    public int pricePerWeek(){
-        return (int) (getPricePerDay()/getNumberOfGuests() * 7 * (1 - discount));
-    }
+    public int pricePerWeek(){return (int) (getPricePerDay()/getNumberOfGuests() * 7 * (1 - discount));}
     @Override
     public int objectStarConditions(){
         int starHostelFloor = 0;
@@ -105,7 +79,5 @@ public class HostelFloor extends Hostel{
         return starHostelFloor;
     }
     @Override
-    public int objectStar() {
-        return super.objectStar() + objectStarConditions()+1;
-    }
+    public int objectStar() {return super.objectStar() + objectStarConditions()+1;}
 }

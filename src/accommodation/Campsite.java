@@ -25,40 +25,20 @@ public class Campsite extends Accommodation implements IAccommodation {
         this.description = description;
     }
 
-    public String getCity() {
-        return city;
-    }
+    public String getCity() {return city;}
 
-    public void setCity(String city) {
-        this.city = city;
-    }
+    public void setCity(String city) {this.city = city;}
 
-    public String getNumber() {
-        return number;
-    }
+    public String getNumber() {return number;}
 
-    public void setNumber(String number) {
-        this.number = number;
-    }
-    public boolean getIsNearbyWater(){
-        return isNearbyWater;
-    }
-    public void setIsNearbyWater(){
-        this.isNearbyWater = isNearbyWater;
-    }
-    public boolean getIsNearbyForest(){
-        return isNearbyForest;
-    }
-    public void setIsNearbyForest(){
-        this.isNearbyForest = isNearbyForest;
-    }
-    public String getDescription() {
-        return description;
-    }
+    public void setNumber(String number) {this.number = number;}
+    public boolean getIsNearbyWater(){return isNearbyWater;}
+    public void setIsNearbyWater(){this.isNearbyWater = isNearbyWater;}
+    public boolean getIsNearbyForest(){return isNearbyForest;}
+    public void setIsNearbyForest(){this.isNearbyForest = isNearbyForest;}
+    public String getDescription() {return description;}
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
+    public void setDescription(String description) {this.description = description;}
     @Override
     public String toString() {
         return super.toString()+ "campsite [city="
@@ -76,7 +56,5 @@ public class Campsite extends Accommodation implements IAccommodation {
     }
 
     @Override
-    public int objectStar() {
-        return super.objectStar() + objectStarConditions();
-    }
+    public int objectStar() {return super.objectStar() + objectStarConditions();}
 }
