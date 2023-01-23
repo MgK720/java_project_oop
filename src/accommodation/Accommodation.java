@@ -3,7 +3,7 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.concurrent.atomic.AtomicInteger;
 
-abstract class Accommodation  {
+abstract class Accommodation implements IAccommodation {
     private static Set<Integer> ids = new HashSet<>();
     private static final AtomicInteger count = new AtomicInteger(0);
     private int idOfAccomodation;
