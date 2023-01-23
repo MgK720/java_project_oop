@@ -16,9 +16,7 @@ abstract class Accommodation  {
         this.objectPrize = objectPrize;
     }
 
-    public int getIdOfAccomodation() {
-        return idOfAccomodation;
-    }
+    public int getIdOfAccomodation() {return idOfAccomodation;}
 
     private void setIdOfAccomodation(int idOfAccomodation) {
         if (ids.contains(idOfAccomodation)) {
@@ -28,54 +26,31 @@ abstract class Accommodation  {
         this.idOfAccomodation = idOfAccomodation;
     }
 
-    public double getAreaOfObject() {
-        return areaOfObject;
-    }
+    public double getAreaOfObject() {return areaOfObject;}
 
-    public void setAreaOfObject(double areaOfObject) {
-        this.areaOfObject = areaOfObject;
-    }
+    public void setAreaOfObject(double areaOfObject) {this.areaOfObject = areaOfObject;}
 
-    public int getYearOfConstruction() {
-        return yearOfConstruction;
-    }
+    public int getYearOfConstruction() {return yearOfConstruction;}
 
-    public void setYearOfConstruction(int yearOfConstruction) {
-        this.yearOfConstruction = yearOfConstruction;
-    }
+    public void setYearOfConstruction(int yearOfConstruction) {this.yearOfConstruction = yearOfConstruction;}
 
-    public double getObjectPrize() {
-        return objectPrize;
-    }
+    public double getObjectPrize() {return objectPrize;}
 
-    public void setObjectPrize(double objectPrize) {
-        this.objectPrize = objectPrize;
-    }
+    public void setObjectPrize(double objectPrize) {this.objectPrize = objectPrize;}
 
     @Override
     public String toString() {
         return "Accommodation [idOfAccomodation=" + getIdOfAccomodation() + ", areaOfObject=" + getAreaOfObject()
                 + ", yearOfConstruction=" + getYearOfConstruction() + ", objectPrize=" + getObjectPrize() + "]";
     }
-    public boolean isRenovatedFrom1990to2000() {
-        return getYearOfConstruction() >= 1990 && getYearOfConstruction() < 2000;
-    }
-    public boolean isRenovatedFrom2000to2010() {
-        return getYearOfConstruction() >= 2000 && getYearOfConstruction() <= 2010;
-    }
-    public boolean isRenovatedAbove2010() {
-        return getYearOfConstruction() > 2010;
-    }
+    public boolean isRenovatedFrom1990to2000() {return getYearOfConstruction() >= 1990 && getYearOfConstruction() < 2000;}
+    public boolean isRenovatedFrom2000to2010() {return getYearOfConstruction() >= 2000 && getYearOfConstruction() <= 2010;}
+    public boolean isRenovatedAbove2010() {return getYearOfConstruction() > 2010;}
     public int objectStar(){
-        if(isRenovatedFrom1990to2000()){
-            return 1;
-        }else if (isRenovatedFrom2000to2010()){
-            return 2;
-        }else if(isRenovatedAbove2010()){
-            return 3;
-        }else{
-            return 0;
-        }
+        if(isRenovatedFrom1990to2000()){return 1;}
+        else if(isRenovatedFrom2000to2010()){return 2;}
+        else if(isRenovatedAbove2010()){return 3;}
+        else{return 0;}
     }
     public abstract int objectStarConditions();
 }
