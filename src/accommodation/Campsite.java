@@ -6,10 +6,9 @@ public class Campsite extends Accommodation implements IAccommodation {
     private boolean isNearbyWater;
     private boolean isNearbyForest;
     private String description;
-    static double discount = 0.25;
+    static final double discount = 0.25;
 
     public Campsite(
-            int idOfAccomodation,
             double areaOfObject,
             int yearOfConstruction,
             double objectPrize,
@@ -18,7 +17,7 @@ public class Campsite extends Accommodation implements IAccommodation {
             boolean isNearbyWater,
             boolean isNearbyForest,
             String description) {
-        super(idOfAccomodation, areaOfObject, yearOfConstruction, objectPrize);
+        super(areaOfObject, yearOfConstruction, objectPrize);
         this.city = city;
         this.number = number;
         this.isNearbyWater = isNearbyWater;

@@ -1,12 +1,16 @@
 package accommodation;
+import java.util.HashSet;
+import java.util.Set;
+
 abstract class Accommodation  {
-    private int idOfAccomodation;
+    private static Set<Integer> ids = new HashSet<>();
+    private static int idOfAccomodation = 1;
     private double areaOfObject;
     private int yearOfConstruction;
     private double objectPrize;
 
-    public Accommodation(int idOfAccomodation, double areaOfObject, int yearOfConstruction, double objectPrize) {
-        this.idOfAccomodation = idOfAccomodation;
+    public Accommodation(double areaOfObject, int yearOfConstruction, double objectPrize) {
+        this.idOfAccomodation = idOfAccomodation++;
         this.areaOfObject = areaOfObject;
         this.yearOfConstruction = yearOfConstruction;
         this.objectPrize = objectPrize;
@@ -16,7 +20,11 @@ abstract class Accommodation  {
         return idOfAccomodation;
     }
 
-    public void setIdOfAccomodation(int idOfAccomodation) {
+    private void setIdOfAccomodation(int idOfAccomodation) {
+        if (ids.contains(idOfAccomodation)) {
+            throw new IllegalArgumentException("Id already exist.");
+        }
+        ids.add(idOfAccomodation);
         this.idOfAccomodation = idOfAccomodation;
     }
 

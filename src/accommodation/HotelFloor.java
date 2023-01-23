@@ -9,7 +9,6 @@ public class HotelFloor extends Hotel{
     private String floorDescription;
 
     public HotelFloor(
-            int idOfAccomodation,
             double areaOfObject,
             int yearOfConstruction,
             double objectPrize,
@@ -27,17 +26,13 @@ public class HotelFloor extends Hotel{
             int pricePerDay,
             String floorDescription) {
 
-        super(idOfAccomodation, areaOfObject, yearOfConstruction, objectPrize, city, road, number, numberOfFloors, numberOfParkingPlaces, isNearbyCenter, description);
+        super(areaOfObject, yearOfConstruction, objectPrize, city, road, number, numberOfFloors, numberOfParkingPlaces, isNearbyCenter, description);
         this.numberOfGuests = numberOfGuests;
         this.floorArea = floorArea;
         this.haveFreeParkingPlace = haveFreeParkingPlace;
         this.haveWifi = haveWifi;
         this.pricePerDay = pricePerDay;
         this.floorDescription = floorDescription;
-    }
-
-    public HotelFloor(int idOfAccomodation, double areaOfObject, int yearOfConstruction, double objectPrize, String city, String road, String number, int numberOfFloors, int numberOfParkingPlaces, boolean isNearbyCenter, String description) {
-        super(idOfAccomodation, areaOfObject, yearOfConstruction, objectPrize, city, road, number, numberOfFloors, numberOfParkingPlaces, isNearbyCenter, description);
     }
 
     public int getNumberOfGuests() {

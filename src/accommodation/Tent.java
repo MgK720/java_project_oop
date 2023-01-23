@@ -7,8 +7,8 @@ public class Tent extends Campsite{
     private boolean haveFreeFood;
     private String tentDescription;
 
-    public Tent(int idOfAccomodation, double areaOfObject, int yearOfConstruction, double objectPrize, String city, String number, boolean isNearbyWater, boolean isNearbyForest, String description, int numberOfGuests, int pricePerDay, boolean haveFreeAdditionalEquipment, boolean haveFreeFood, String tentDescription) {
-        super(idOfAccomodation, areaOfObject, yearOfConstruction, objectPrize, city, number, isNearbyWater, isNearbyForest, description);
+    public Tent(double areaOfObject, int yearOfConstruction, double objectPrize, String city, String number, boolean isNearbyWater, boolean isNearbyForest, String description, int numberOfGuests, int pricePerDay, boolean haveFreeAdditionalEquipment, boolean haveFreeFood, String tentDescription) {
+        super(areaOfObject, yearOfConstruction, objectPrize, city, number, isNearbyWater, isNearbyForest, description);
         this.numberOfGuests = numberOfGuests;
         this.pricePerDay = pricePerDay;
         this.haveFreeAdditionalEquipment = haveFreeAdditionalEquipment;

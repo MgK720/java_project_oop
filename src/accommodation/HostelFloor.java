@@ -9,7 +9,6 @@ public class HostelFloor extends Hostel{
     private String floorDescription;
 
     public HostelFloor(
-            int idOfAccomodation,
             double areaOfObject,
             int yearOfConstruction,
             double objectPrize,
@@ -27,7 +26,7 @@ public class HostelFloor extends Hostel{
             int pricePerDay,
             String floorDescription) {
 
-        super(idOfAccomodation, areaOfObject, yearOfConstruction, objectPrize, city, road, number, numberOfFloors, numberOfParkingPlaces, isNearbyCenter, description);
+        super(areaOfObject, yearOfConstruction, objectPrize, city, road, number, numberOfFloors, numberOfParkingPlaces, isNearbyCenter, description);
         this.numberOfGuests = numberOfGuests;
         this.floorArea = floorArea;
         this.havePrivateBathroom = havePrivateBathroom;

@@ -8,10 +8,9 @@ public class Hotel extends Accommodation implements IAccommodation {
     private int numberOfParkingPlaces;
     private boolean isNearbyCenter;
     private String description;
-    static double discount = 0.15;
+    static final double discount = 0.15;
 
     public Hotel(
-            int idOfAccomodation,
             double areaOfObject,
             int yearOfConstruction,
             double objectPrize,
@@ -22,7 +21,7 @@ public class Hotel extends Accommodation implements IAccommodation {
             int numberOfParkingPlaces,
             boolean isNearbyCenter,
             String description) {
-        super(idOfAccomodation, areaOfObject, yearOfConstruction, objectPrize);
+        super(areaOfObject, yearOfConstruction, objectPrize);
         this.city = city;
         this.road = road;
         this.number = number;
