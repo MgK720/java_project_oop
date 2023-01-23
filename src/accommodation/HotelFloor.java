@@ -83,8 +83,8 @@ public class HotelFloor extends Hotel{
 
     @Override
     public String toString() {
-        return super.toString() + " HostelFloor [numberOfGuests=" + getNumberOfGuests() + ", floorArea=" + getFloorArea() + ", haveFreeParkingPlace=" + isHaveFreeParkingPlace()
-                + ", haveWifi=" + isHaveWifi() + ", pricePerDay=" + getPricePerDay() + ", floorDescription=" + getFloorDescription() +"objectStar"+objectStar()+ "]";
+        return super.toString() + "HostelFloor [numberOfGuests=" + getNumberOfGuests() + ", floorArea=" + getFloorArea() + ", haveFreeParkingPlace=" + isHaveFreeParkingPlace()
+                + ", haveWifi=" + isHaveWifi() + ", pricePerDay=" + getPricePerDay() + ", floorDescription=" + getFloorDescription() +"objectStar="+objectStar()+ "]\n";
     }
     public int pricePerWeek(){
         return (int) (getPricePerDay()/getNumberOfGuests() * 7 * (1 - discount));

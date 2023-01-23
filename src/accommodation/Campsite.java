@@ -42,7 +42,7 @@ public class Campsite extends Accommodation implements IAccommodation {
     @Override
     public String toString() {
         return super.toString()+ "campsite [city="
-                + getCity() + ", number=" + getNumber() +"isNearbyWater=" + getIsNearbyWater()+"isNearbyForest="+getIsNearbyForest()+ ", description=" + getDescription() + "]";
+                + getCity() + ", number=" + getNumber() +", isNearbyWater=" + getIsNearbyWater()+", isNearbyForest="+getIsNearbyForest()+ ", description=" + getDescription() + "]\n";
     }
     public int objectStarConditions() {
         int campsiteStar = 0;

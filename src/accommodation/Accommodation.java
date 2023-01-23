@@ -1,20 +1,22 @@
 package accommodation;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.concurrent.atomic.AtomicInteger;
 
 abstract class Accommodation  {
     private static Set<Integer> ids = new HashSet<>();
-    private static int idOfAccomodation = 1;
+    private static final AtomicInteger count = new AtomicInteger(0);
+    private int idOfAccomodation;
     private double areaOfObject;
     private int yearOfConstruction;
     private double objectPrize;
 
     public Accommodation(double areaOfObject, int yearOfConstruction, double objectPrize) {
-        this.idOfAccomodation = idOfAccomodation++;
-        ids.add(this.idOfAccomodation);
+        idOfAccomodation = count.incrementAndGet();
         this.areaOfObject = areaOfObject;
         this.yearOfConstruction = yearOfConstruction;
         this.objectPrize = objectPrize;
+        ids.add(this.idOfAccomodation);
     }
 
     public int getIdOfAccomodation() {return idOfAccomodation;}
@@ -26,6 +28,7 @@ abstract class Accommodation  {
         ids.add(idOfAccomodation);
         this.idOfAccomodation = idOfAccomodation;
     }
+    public Set<Integer> getIds(){ return ids;}
 
     public double getAreaOfObject() {return areaOfObject;}
 
@@ -42,7 +45,7 @@ abstract class Accommodation  {
     @Override
     public String toString() {
         return "Accommodation [idOfAccomodation=" + getIdOfAccomodation() + ", areaOfObject=" + getAreaOfObject()
-                + ", yearOfConstruction=" + getYearOfConstruction() + ", objectPrize=" + getObjectPrize() + "]";
+                + ", yearOfConstruction=" + getYearOfConstruction() + ", objectPrize=" + getObjectPrize() + "]\n";
     }
     public boolean isRenovatedFrom1990to2000() {return getYearOfConstruction() >= 1990 && getYearOfConstruction() < 2000;}
     public boolean isRenovatedFrom2000to2010() {return getYearOfConstruction() >= 2000 && getYearOfConstruction() <= 2010;}

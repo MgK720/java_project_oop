@@ -60,8 +60,8 @@ public class HostelFloor extends Hostel{
 
     @Override
     public String toString() {
-        return super.toString() + " HostelFloor [numberOfGuests=" + getNumberOfGuests() + ", floorArea=" + getFloorArea() + ", havePrivateBathroom=" + isHavePrivateBathroom()
-                + ", haveWifi=" + isHaveWifi() + ", pricePerDay=" + getPricePerDay() + ", floorDescription=" + getFloorDescription() +"objectStar"+objectStar()+ "]";
+        return super.toString() + "HostelFloor [numberOfGuests=" + getNumberOfGuests() + ", floorArea=" + getFloorArea() + ", havePrivateBathroom=" + isHavePrivateBathroom()
+                + ", haveWifi=" + isHaveWifi() + ", pricePerDay=" + getPricePerDay() + ", floorDescription=" + getFloorDescription() +", objectStar="+objectStar()+ "]\n";
     }
     public int pricePerWeek(){return (int) (getPricePerDay()/getNumberOfGuests() * 7 * (1 - discount));}
     @Override

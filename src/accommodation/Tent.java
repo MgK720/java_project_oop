@@ -36,8 +36,8 @@ public class Tent extends Campsite{
     public void setTentDescription(String tentDescription) {this.tentDescription = tentDescription;}
     @Override
     public String toString() {
-        return super.toString() + " Tent [numberOfGuests=" + getNumberOfGuests() + ", pricePerDay=" + getPricePerDay() + ", haveFreeAdditionalEquipment=" + isHaveFreeAdditionalEquipment()
-                + ", haveFreeFood=" + isHaveFreeFood() + ", tentDescription=" + getTentDescription() + "objectStar"+objectStar()+ "]";
+        return super.toString() + "Tent [numberOfGuests=" + getNumberOfGuests() + ", pricePerDay=" + getPricePerDay() + ", haveFreeAdditionalEquipment=" + isHaveFreeAdditionalEquipment()
+                + ", haveFreeFood=" + isHaveFreeFood() + ", tentDescription=" + getTentDescription() + ", objectStar="+objectStar()+ "]\n";
     }
     public int pricePerWeek(){return (int) (getPricePerDay()/getNumberOfGuests() * 7 * (1 - discount));}
     public int objectStarConditions() {
