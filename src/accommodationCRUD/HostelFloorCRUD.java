@@ -17,6 +17,12 @@ public class HostelFloorCRUD {
     public void createHostelFloor(HostelFloor hostelFloor) {
         hostelFloors.add(hostelFloor);
         hostelFloorsID.put(hostelFloor.getIdOfAccomodation(), hostelFloor);
+    }
+    public List<HostelFloor> readAllHostelFloors() {
+        return hostelFloors;
+    }
 
+    public HostelFloor readHostelFloor(int id) {
+        return hostelFloorsID.get(id);
     }
 }

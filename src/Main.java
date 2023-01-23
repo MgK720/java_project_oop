@@ -2,6 +2,8 @@ import accommodation.HostelFloor;
 import accommodation.Tent;
 import accommodationCRUD.HostelFloorCRUD;
 
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -20,5 +22,13 @@ public class Main {
         hostelFloorCRUD.createHostelFloor(test);
         hostelFloorCRUD.createHostelFloor(test3);
         hostelFloorCRUD.createHostelFloor(test4);
+
+        List<HostelFloor> hostelFloors = hostelFloorCRUD.readAllHostelFloors();
+        System.out.println(hostelFloors);
+
+        HostelFloor readtest1 = hostelFloorCRUD.readHostelFloor(1);
+        HostelFloor readtest2 = hostelFloorCRUD.readHostelFloor(2);
+        System.out.println(readtest1);
+        System.out.println(readtest2);
     }
 }
