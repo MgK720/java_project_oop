@@ -1,4 +1,4 @@
 package accommodationCRUD;
 
-public class TentFloorCRUD {
+public class TentCRUD {
 }

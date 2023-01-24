@@ -24,26 +24,23 @@ public class HotelFloorCRUD {
     public List<HotelFloor> readAllHotelFloors() {
         return hotelFloors;
     }
+    public boolean hotelFloorExists(int id) {
+        return hotelFloorsID.containsKey(id);
+    }
+    public void printHotelFloorNotFound(int id) {
+        System.out.println("Hotel floor with id " + id + " does not exist.");
+    }
 
     public HotelFloor readHotelFloor(int id) {
-        if (!hotelFloorsID.containsKey(id)) {
-            System.out.println("Hotel floor with id " + id + " does not exist.");
-            return null;
-        }
         return hotelFloorsID.get(id);
     }
     public void updateHotelFloor(int index, HotelFloor hotelFloor) {
-        if (!hotelFloorsID.containsKey(index)) {
-            System.out.println("Hotel floor with id " + index + " does not exist.");
-            return;
-        }
         hotelFloors.set(index, hotelFloor);
     }
     public void deleteHotelFloor(int id) {
-        if (!hotelFloorsID.containsKey(id)) {
-            System.out.println("Hotel floor with id " + id + " does not exist.");
+        /*if (!hotelFloorsID.containsKey(id)) {
             return;
-        }
+        }*/
         int index = hotelFloors.indexOf(hotelFloorsID.get(id));
         hotelFloorsID.remove(id);
         hotelFloors.remove(index);
