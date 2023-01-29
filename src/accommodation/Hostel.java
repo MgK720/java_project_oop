@@ -72,9 +72,8 @@ public class Hostel extends Accommodation implements IAccommodation {
     }
     @Override
     public int objectStar() {
-        //System.out.println("super:"+super.objectStar());
-        System.out.println("current:"+objectStarConditions());
-        return super.objectStar() + objectStarConditions();
+        int conditions = objectStarConditions();
+        return super.objectStar() + conditions;
     }
 }
 

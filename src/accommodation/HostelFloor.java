@@ -80,7 +80,7 @@ public class HostelFloor extends Hostel{
     }
     @Override
     public int objectStar() {
-        System.out.println("super:"+super.objectStarConditions());
-        System.out.println("current:"+objectStarConditions());
-        return super.objectStar() + objectStarConditions()+1;}
+        int conditions = super.objectStarConditions();
+        //todo 1 jako stała
+        return super.objectStar() + conditions+1;}
 }

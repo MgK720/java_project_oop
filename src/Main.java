@@ -7,7 +7,7 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
-        HostelFloor test = new HostelFloor(15, 1980, 200000, "Warsaw", "Olejowa", "3b", 4, 25, true, "fajny budynek", 1, 15, false, false, 500, "Fajny pokoj");
+        HostelFloor test = new HostelFloor(15, 2015, 200000, "Warsaw", "Olejowa", "3b", 4, 35, false, "fajny budynek", 1, 15, true, false, 30, "Fajny pokoj");
         Tent test2 = new Tent(15, 2011, 200000, "Warsaw","5", true,true,"fajny campsite",4,100,false,true,"Super namiot");
         HostelFloor test3 = new HostelFloor(20, 2011, 200000, "Szczytno", "Olejowa", "3b", 4, 30, false, "fajny budynek", 1, 15, false, false, 500, "Fajny pokoj");
         HostelFloor test4 = new HostelFloor(20, 2011, 200000, "usun", "Olejowa", "3b", 4, 30, false, "fajny budynek", 1, 15, false, false, 500, "Fajny pokoj");
