@@ -6,6 +6,7 @@ public class Campsite extends Accommodation implements IAccommodation {
     private boolean isNearbyWater;
     private boolean isNearbyForest;
     private String description;
+    //todo przerobic na private + metoda get + zastosowanie tego w subklasie
     static final double discount = 0.25;
 
     public Campsite(

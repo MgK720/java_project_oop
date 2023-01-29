@@ -8,6 +8,7 @@ public class Hotel extends Accommodation implements IAccommodation {
     private int numberOfParkingPlaces;
     private boolean isNearbyCenter;
     private String description;
+    //todo przerobic na private + metoda get + zastosowanie tego w subklasie
     static final double discount = 0.15;
 
     public Hotel(
