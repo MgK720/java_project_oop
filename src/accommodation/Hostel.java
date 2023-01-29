@@ -71,7 +71,9 @@ public class Hostel extends Accommodation implements IAccommodation {
         return hostelStar;
     }
     @Override
-    public int objectStar() {return super.objectStar() + objectStarConditions();}
+    public int objectStar() {
+        return super.objectStar() + objectStarConditions();
+    }
 }
 
 
