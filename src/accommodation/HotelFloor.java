@@ -105,6 +105,8 @@ public class HotelFloor extends Hotel{
     }
     @Override
     public int objectStar() {
+        int conditions = super.objectStarConditions();
+        //todo 2 jako stala
         return super.objectStar() + objectStarConditions()+2;
     }
 }

@@ -106,6 +106,7 @@ public class Hotel extends Accommodation implements IAccommodation {
     }
     @Override
     public int objectStar() {
-        return super.objectStar() + objectStarConditions();
+        int conditions = objectStarConditions();
+        return super.objectStar() + conditions;
     }
 }

@@ -55,5 +55,8 @@ public class Tent extends Campsite{
     }
 
     @Override
-    public int objectStar() {return super.objectStar() + objectStarConditions();}
+    public int objectStar() {
+        int conditions = super.objectStarConditions();
+        return super.objectStar() + conditions;
+    }
 }

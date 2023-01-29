@@ -56,5 +56,8 @@ public class Campsite extends Accommodation implements IAccommodation {
     }
 
     @Override
-    public int objectStar() {return super.objectStar() + objectStarConditions();}
+    public int objectStar() {
+        int conditions = objectStarConditions();
+        return super.objectStar() + conditions;
+    }
 }
