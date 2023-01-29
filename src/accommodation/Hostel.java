@@ -61,7 +61,7 @@ public class Hostel extends Accommodation implements IAccommodation {
     public String toString() {
         return super.toString()+ "Hostel [city="
                 + getCity() + ", road=" + getRoad() + ", number=" + getNumber() + ", numberOfFloors=" + getNumberOfFloors()
-                + ", numberOfParkingPlaces=" + getNumberOfParkingPlaces() +" isNearbyCenter=" + isNearbyCenter+ ", description=" + getDescription() + "]\n";
+                + ", numberOfParkingPlaces=" + getNumberOfParkingPlaces() +" isNearbyCenter=" + getIsNearbyCenter()+ ", description=" + getDescription() + "]\n";
     }
     public boolean isNumberOfParkingPlacesAbove30(){return getNumberOfParkingPlaces() > 30;}
     public int objectStarConditions(){
@@ -72,6 +72,8 @@ public class Hostel extends Accommodation implements IAccommodation {
     }
     @Override
     public int objectStar() {
+        //System.out.println("super:"+super.objectStar());
+        System.out.println("current:"+objectStarConditions());
         return super.objectStar() + objectStarConditions();
     }
 }
